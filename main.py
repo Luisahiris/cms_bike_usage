@@ -11,49 +11,49 @@ from functools import reduce
 
 # ----------------------------- DATASETS -------------------------------------------------------
 # 2017
-csv_path_2017 = r"C:\Users\LEspinal\Downloads\Citywide_Mobility_Survey_-_Main_2017_20240801.csv"
+csv_path_2017 = r"datasets\Citywide_Mobility_Survey_-_Main_2017_20240801.csv"
 ds_2017 = pd.read_csv(csv_path_2017, low_memory=False)
 
 # 2018
-csv_path_2018 = r"C:\Users\LEspinal\Downloads\Citywide_Mobility_Survey_-_Main_2018_20240801.csv"
+csv_path_2018 = r"datasets\Citywide_Mobility_Survey_-_Main_2018_20240801.csv"
 ds_2018 = pd.read_csv(csv_path_2018, low_memory=False)
 
 # 2019
-csv_path_2019 = r"C:\Users\LEspinal\Downloads\Citywide_Mobility_Survey_-_Person_2019_20240801.csv"
+csv_path_2019 = r"datasets\Citywide_Mobility_Survey_-_Person_2019_20240801.csv"
 ds_2019 = pd.read_csv(csv_path_2019, low_memory=False)
 
 # 2020
-csv_path_2020 = r"C:\Users\LEspinal\Downloads\Citywide_Mobility_Survey_-_October_2020_20240801.csv"
+csv_path_2020 = r"datasets\Citywide_Mobility_Survey_-_October_2020_20240801.csv"
 ds_2020 = pd.read_csv(csv_path_2020, low_memory=False)
 
 # 2022
-csv_path_2022 = r"C:\Users\LEspinal\Downloads\Citywide_Mobility_Survey_-_Person_2022_20240725.csv"
+csv_path_2022 = r"datasets\Citywide_Mobility_Survey_-_Person_2022_20240725.csv"
 ds_2022 = pd.read_csv(csv_path_2022, low_memory=False)
 
 # ------------------------------ CODEBOOKS -----------------------------------------------------
 # 2017 codebook
-csv_path_codebook_2017 = r"C:\Users\LEspinal\Downloads\Data_Dictionary_-Citywide_Mobility_Survey_Main_2017.xlsx"
+csv_path_codebook_2017 = r"codebooks\Data_Dictionary_-Citywide_Mobility_Survey_Main_2017.xlsx"
 codebook_2017 = pd.read_excel(csv_path_codebook_2017, sheet_name="Column Info", index_col=[0])
 codebook_2017 = codebook_2017.reset_index()
 codebook_2017.columns = ["column_name", "column_description", "qnumber", "additional_notes"]
 
 # 2018 codebook
-csv_path_codebook_2018 = r"C:\Users\LEspinal\Downloads\Open_Data_Dictionary_Main_Survey_2018.xlsx"
+csv_path_codebook_2018 = r"codebooks\Open_Data_Dictionary_Main_Survey_2018.xlsx"
 codebook_2018 = pd.read_excel(csv_path_codebook_2018, sheet_name="Column Info")
 codebook_2018.columns = ["column_name", "column_description", "qnumber", "additional_notes"]
 
 # 2019 codebook
-csv_path_codebook_2019 = r"C:\Users\LEspinal\Downloads\Data-Dictionary-Citywide_Mobility_Survey_-_Person_Survey_2019.xlsx"
+csv_path_codebook_2019 = r"codebooks\Data-Dictionary-Citywide_Mobility_Survey_-_Person_Survey_2019.xlsx"
 codebook_2019 = pd.read_excel(csv_path_codebook_2019, sheet_name="Column Information")
 codebook_2019.columns = ["column_name", "column_description", "values", "limitations", "additional_notes"]
 
 # 2020 codebook
-csv_path_codebook_2020 = r"C:\Users\LEspinal\Downloads\Data-Dictionary-Citywide_Mobility_Survey_-_October_2020.xlsx"
+csv_path_codebook_2020 = r"codebooks\Data-Dictionary-Citywide_Mobility_Survey_-_October_2020.xlsx"
 codebook_2020 = pd.read_excel(csv_path_codebook_2020, sheet_name="Column Information")
 codebook_2020.columns = ["column_name", "column_description", "values", "limitations", "additional_notes"]
 
 # 2022 codebook
-csv_path_codebook_2022 = r"C:\Users\LEspinal\Downloads\2022_NYC_CMS_Codebook.xlsx"
+csv_path_codebook_2022 = r"codebooks\2022_NYC_CMS_Codebook.xlsx"
 codebook_2022 = pd.read_excel(csv_path_codebook_2022, sheet_name="value_labels")
 
 # ------------------------------------------------------------------------------------------------
